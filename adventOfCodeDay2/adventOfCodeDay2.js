@@ -1,6 +1,6 @@
 const { readFile } = require("fs");
 
-readFile('puzzle_data/rockPaperScissorsStrategyGuide.txt', (err, data) => {
+readFile('data.txt', (err, data) => {
   if (err) throw err;
 
   const rock = 'ROCK'

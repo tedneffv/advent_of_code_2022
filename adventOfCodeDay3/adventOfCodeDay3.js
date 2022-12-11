@@ -1,6 +1,6 @@
 const { readFile } = require("fs");
 
-readFile('puzzle_data/rucksackData.txt', (err, data) => {
+readFile('data.txt', (err, data) => {
   if (err) throw err;
 
   const lowerCaseSubtractor = 96

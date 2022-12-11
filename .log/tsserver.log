@@ -1,0 +1,28 @@
+Info 0    [01:21:23.092] Starting TS Server
+Info 1    [01:21:23.093] Version: 4.3.2
+Info 2    [01:21:23.093] Arguments: /Users/tedneff/.nvm/versions/node/v14.18.1/bin/node /usr/local/bin/tsserver --logFile /Users/tedneff/Projects/Javascript/AdventOfCode_2022/.log/tsserver.log --logVerbosity info --cancellationPipeName /private/var/folders/jh/zdw_54tj0nj2kzb37gpmhp2m0000gn/T/bede2149cc45c2dc8893a5bedf789624/tscancellation*
+Info 3    [01:21:23.093] Platform: darwin NodeVersion: 14 CaseSensitive: false
+Info 4    [01:21:23.093] ServerMode: undefined syntaxOnly: false hasUnknownServerMode: undefined
+Info 5    [01:21:23.107] Search path: /Users/tedneff/Projects/Javascript/AdventOfCode_2022/adventOfCodeDay3
+Info 6    [01:21:23.107] For info: /Users/tedneff/Projects/Javascript/AdventOfCode_2022/adventOfCodeDay3/adventOfCodeDay3.js :: No config files found.
+Info 7    [01:21:23.112] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 8    [01:21:24.027] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 1 structureChanged: true Elapsed: 915.3436388969421ms
+Info 9    [01:21:24.027] Project '/dev/null/inferredProject1*' (Inferred)
+Info 10   [01:21:24.028] 	Files (86)
+
+Info 11   [01:21:24.028] -----------------------------------------------
+Info 12   [01:21:29.498] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 13   [01:21:29.512] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 2 structureChanged: false Elapsed: 13.823430061340332ms
+Info 14   [01:21:29.512] Different program with same set of files:: structureIsReused:: 2
+Info 15   [01:21:30.106] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 16   [01:21:30.116] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 3 structureChanged: false Elapsed: 9.499503135681152ms
+Info 17   [01:21:30.116] Different program with same set of files:: structureIsReused:: 2
+Info 18   [01:21:30.487] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 19   [01:21:30.495] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 4 structureChanged: false Elapsed: 8.644237995147705ms
+Info 20   [01:21:30.495] Different program with same set of files:: structureIsReused:: 2
+Info 21   [01:21:30.707] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 22   [01:21:30.716] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 5 structureChanged: false Elapsed: 8.686077117919922ms
+Info 23   [01:21:30.716] Different program with same set of files:: structureIsReused:: 2
+Info 24   [01:21:31.293] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 25   [01:21:31.301] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 6 structureChanged: false Elapsed: 8.26055908203125ms
+Info 26   [01:21:31.301] Different program with same set of files:: structureIsReused:: 2

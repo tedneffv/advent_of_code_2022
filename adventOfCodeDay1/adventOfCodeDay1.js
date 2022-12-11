@@ -1,6 +1,6 @@
 const { readFile } = require("fs");
 
-readFile('puzzle_data/elfCalorieData.txt', (err, data) => {
+readFile('data.txt', (err, data) => {
   if (err) throw err;
 
   const splitCalorieData = data.toString().split('\n');
