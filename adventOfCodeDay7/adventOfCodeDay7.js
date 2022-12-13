@@ -7,8 +7,10 @@ readFile('data.txt', (err, data) => {
     
     let fileTree = { '/' : {} }
     let currentDirectory = [];
-    let currentMode;
-    const directorySet = new Set();
+    let totalLessThanThreshold = 0;
+    const LARGE_FILE_THRESHOLD = 100000;
+    const DELETE_SPACE_THRESHOLD = 3629016;
+    let maxDirectorySizeUnderThreshold = Infinity;
 
     const changeDirectory = (newDir) => {
       newDir === '..' ? currentDirectory.pop() : currentDirectory.push(newDir);
@@ -22,33 +24,24 @@ readFile('data.txt', (err, data) => {
       command[0] === 'dir' ? tempDir[command[1]] = {} : tempDir[command[1]] = command[0]
     }
 
-    const getAllDirectories = (obj) => {
-      for (var key in obj) {
-        if (typeof obj[key] === 'object') {
-          directorySet.add(key)
-          getAllDirectories(obj[key])
-        }
-      }
-    }
-
     const computeDirectoryTotals = ({ obj, total }) => {
       let newTotal = total;
       for (var key in obj) {
         if (typeof obj[key] === 'object') {
           newTotal += computeDirectoryTotals({ obj: obj[key], total});
         } else {
-          console.log({key: key})
           newTotal += Number(obj[key])
         }
       }
+      if (newTotal < LARGE_FILE_THRESHOLD) totalLessThanThreshold += newTotal
+      if (DELETE_SPACE_THRESHOLD <= newTotal && newTotal < maxDirectorySizeUnderThreshold) maxDirectorySizeUnderThreshold = newTotal 
       return newTotal
     }
 
     commandArray.forEach((command) => {
       const commandSplit = command.split(' ')
       if (commandSplit[0] === '$') {
-        currentMode = commandSplit[1]
-        if (currentMode === 'cd') {
+        if (commandSplit[1] === 'cd') {
           changeDirectory(commandSplit[2])
         }
         return
@@ -57,10 +50,10 @@ readFile('data.txt', (err, data) => {
       }
     })
 
-    getAllDirectories(fileTree);
-    console.log(`total = ${computeDirectoryTotals({ obj: fileTree['/']['d'], total: 0 })}`);
-    
-    console.log({ fileTree: JSON.stringify(fileTree, null, 2) })
-    
+    computeDirectoryTotals({ obj: fileTree['/'], total: 0 })
+    /* Answer to Part 1 */
+    console.log({ totalLessThanThreshold });
+    /* Answer to Part 2 */
+    console.log({ maxDirectorySizeUnderThreshold });
 });
 
