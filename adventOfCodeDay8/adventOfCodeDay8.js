@@ -19,7 +19,7 @@ readFile('data.txt', (err, data) => {
           // return true;
 
           // Part 2
-          return treeCount; // return true for part 1
+          return treeCount;
         }
         i--
       }
@@ -27,7 +27,7 @@ readFile('data.txt', (err, data) => {
       // return false;
 
       // Part 2
-      return treeCount; // return false for part 1
+      return treeCount;
     }
 
     const checkWest = (i, j, treeHeight) => {
@@ -40,7 +40,7 @@ readFile('data.txt', (err, data) => {
           // return true
 
           // Part 2
-          return treeCount // return true for part 1
+          return treeCount;
         }
         j--
       }
@@ -48,7 +48,7 @@ readFile('data.txt', (err, data) => {
       // return false
 
       // Part 2
-      return treeCount // return false for part 1
+      return treeCount
     }
 
     const checkSouth = (i, j, treeHeight) => {
