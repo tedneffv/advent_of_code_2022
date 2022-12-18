@@ -5,12 +5,16 @@ readFile('data.txt', (err, data) => {
 
   const moveData = data.toString().split('\n');
 
-  const tailPositionSet = new Set('00');
+  const tailPositionSet = new Set();
+  tailPositionSet.add('0,0')
   let headPosition = [0, 0];
   let tailPosition = [0, 0];
+  let knotArray = Array(10).fill([0, 0]);
+  console.log({ knotArray })
+
   
   const addToTailPositionSet = () => {
-    tailPositionSet.add(`${tailPosition[0]}${tailPosition[1]}`);
+    tailPositionSet.add(`${tailPosition[0]},${tailPosition[1]}`);
   }
 
   const moveTailIfRequired = () => {
@@ -114,25 +118,5 @@ readFile('data.txt', (err, data) => {
   })
 
   console.log({ headPosition, tailPosition, totalTailMoves: tailPositionSet.size });
-
-  // const mapArray = [];
-  // for (let i = 0; i < 5; i++) {
-  //   let mapString = ''
-  //   for (let j = 0; j < 6; j++) {
-  //     if (headPosition[0] === i && headPosition[1] === j) {
-  //       mapString += 'H';
-  //     }
-  //     else if (tailPosition[0] === i && tailPosition[1] === j) {
-  //       mapString += 'T'
-  //     }
-  //     else if (i === 0 && j === 0) {
-  //       mapString += 's'
-  //     } else {
-  //       mapString += '.'
-  //     }
-  //   }
-  //   mapArray.push(mapString)
-  // }
-  // mapArray.forEach((row) => console.log(row))
 });
 
